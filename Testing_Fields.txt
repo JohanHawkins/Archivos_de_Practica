@@ -1,0 +1,6 @@
+Este repositorio, es para evidenciar la practica y el aprendizaje en diferentes niveles:
+Facil, Intermedio y Dificil; de los diferentes fragmentos teoricos que componen a la programacion y
+el desarrollo de software, front-end y back-end.
+
+Cabe aclarar, esto se realiza haciendo uso del prompt enginnier, creando estructuras
+entendiendo su funcionamiento y realizando depuracion constante.

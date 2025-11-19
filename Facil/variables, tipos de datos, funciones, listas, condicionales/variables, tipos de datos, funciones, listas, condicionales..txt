@@ -1,0 +1,8 @@
+Pida al usuario 3 notas (floats) y las guarde en una lista.
+
+Calcule el promedio usando una función.
+Use un condicional para decir:
+- “Aprobado” si el promedio es mayor o igual a 3.0
+- “Reprobado” en caso contrario
+
+Muestre el promedio y el resultado final.
