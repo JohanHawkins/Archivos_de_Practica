@@ -19,6 +19,20 @@ class Program
         {
             Console.WriteLine(n);
         }
+
+        // Calcular promedio
+        float promedio = CalcularPromedio(notas);
+        Console.WriteLine($"\nEl promedio es: {promedio:F2}");
+
+        // Mensaje de aprobado o reprobado
+        if (promedio >= 3.0f)
+        {
+            Console.WriteLine("Resultado: Aprobado");
+        }
+        else
+        {
+            Console.WriteLine("Resultado: Reprobado");
+        }
     }
 
     // Función de validación
@@ -53,5 +67,18 @@ class Program
 
             Console.WriteLine("Intente nuevamente.\n");
         }
+    }
+
+    // Función para calcular el promedio
+    static float CalcularPromedio(float[] notas)
+    {
+        float suma = 0;
+
+        foreach (float n in notas)
+        {
+            suma += n;
+        }
+
+        return suma / notas.Length;
     }
 }
