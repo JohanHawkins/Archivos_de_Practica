@@ -1,22 +1,17 @@
 ﻿using System;
 using System.Globalization;
 
-class Program
-{
-    static void Main(string[] args)
-    {
+class Program{
+    static void Main(string[] args){
         float[] notas = new float[3];
 
         Console.WriteLine("\n Ingrese 3 notas (valores entre 1.0 y 5.0). \n Use punto (.) como separador decimal.\n");
 
-        for (int i = 0; i < notas.Length; i++)
-        {
+        for (int i = 0; i < notas.Length; i++){
             notas[i] = LeerNotaValida(i + 1);
         }
-
         Console.WriteLine("\nNotas ingresadas:");
-        foreach (float n in notas)
-        {
+        foreach (float n in notas){
             Console.WriteLine(n);
         }
 
@@ -25,43 +20,34 @@ class Program
         Console.WriteLine($"\nEl promedio es: {promedio:F2}");
 
         // Mensaje de aprobado o reprobado
-        if (promedio >= 3.0f)
-        {
+        if (promedio >= 3.0f){
             Console.WriteLine("Resultado: Aprobado");
         }
-        else
-        {
+        else{
             Console.WriteLine("Resultado: Reprobado");
         }
     }
 
     // Función de validación
-    static float LeerNotaValida(int numeroNota)
-    {
-        while (true)
-        {
+    static float LeerNotaValida(int numeroNota){
+        while (true){
             Console.Write($"Nota #{numeroNota}: ");
             string input = Console.ReadLine();
 
             // Intentar convertir respetando el punto decimal
-            if (float.TryParse(input, NumberStyles.Float, CultureInfo.InvariantCulture, out float valor))
-            {
+            if (float.TryParse(input, NumberStyles.Float, CultureInfo.InvariantCulture, out float valor)){
                 // Validar rango y no negativos
-                if (valor < 0)
-                {
+                if (valor < 0){
                     Console.WriteLine("ERROR: No se permiten números negativos.");
                 }
-                else if (valor < 1 || valor > 5)
-                {
+                else if (valor < 1 || valor > 5){
                     Console.WriteLine("ERROR: La nota debe estar entre 1.0 y 5.0.");
                 }
-                else
-                {
+                else{
                     return valor; // válido
                 }
             }
-            else
-            {
+            else{
                 Console.WriteLine("ERROR: Formato inválido. Use punto (.) para decimales. Ej: 3.5");
             }
 
@@ -73,12 +59,9 @@ class Program
     static float CalcularPromedio(float[] notas)
     {
         float suma = 0;
-
-        foreach (float n in notas)
-        {
+        foreach (float n in notas){
             suma += n;
         }
-
         return suma / notas.Length;
     }
 }

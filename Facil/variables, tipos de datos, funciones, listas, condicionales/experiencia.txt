@@ -1,0 +1,3 @@
+Es la primera vez que utilizo C#, pese a que ya he tenido cuentro con derivados de C
+(C++), fue facil entender la estructura del codigo y comodo al momento de depurarlo,
+organizarlo e implementar manejo de errores.
