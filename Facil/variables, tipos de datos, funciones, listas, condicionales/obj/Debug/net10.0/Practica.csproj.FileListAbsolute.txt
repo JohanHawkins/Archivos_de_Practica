@@ -1,0 +1,15 @@
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\bin\Debug\net10.0\Practica.exe
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\bin\Debug\net10.0\Practica.deps.json
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\bin\Debug\net10.0\Practica.runtimeconfig.json
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\bin\Debug\net10.0\Practica.dll
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\bin\Debug\net10.0\Practica.pdb
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\obj\Debug\net10.0\Practica.GeneratedMSBuildEditorConfig.editorconfig
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\obj\Debug\net10.0\Practica.AssemblyInfoInputs.cache
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\obj\Debug\net10.0\Practica.AssemblyInfo.cs
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\obj\Debug\net10.0\Practica.csproj.CoreCompileInputs.cache
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\obj\Debug\net10.0\Practica.sourcelink.json
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\obj\Debug\net10.0\Practica.dll
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\obj\Debug\net10.0\refint\Practica.dll
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\obj\Debug\net10.0\Practica.pdb
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\obj\Debug\net10.0\Practica.genruntimeconfig.cache
+D:\Codes\Practica\Facil\variables, tipos de datos, funciones, listas, condicionales\obj\Debug\net10.0\ref\Practica.dll

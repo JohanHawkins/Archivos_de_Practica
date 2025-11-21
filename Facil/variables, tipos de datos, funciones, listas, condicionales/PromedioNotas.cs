@@ -1,26 +1,57 @@
-// Procedimiento realizado usando IA assistance
-
-using System;
+﻿using System;
+using System.Globalization;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // array de longitud 3 {0,1,2}
-        float[] datos = new float[3];
+        float[] notas = new float[3];
 
-        Console.WriteLine("Ingrese 3 valores tipo float:");
+        Console.WriteLine("\n Ingrese 3 notas (valores entre 1.0 y 5.0). \n Use punto (.) como separador decimal.\n");
 
-        for (int i = 0; i < datos.Length; i++)
+        for (int i = 0; i < notas.Length; i++)
         {
-            Console.Write($"Dato #{i + 1}: ");
-            datos[i] = float.Parse(Console.ReadLine());
+            notas[i] = LeerNotaValida(i + 1);
         }
 
-        Console.WriteLine("\nLos datos ingresados son:");
-        foreach (float valor in datos)
+        Console.WriteLine("\nNotas ingresadas:");
+        foreach (float n in notas)
         {
-            Console.WriteLine(valor);
+            Console.WriteLine(n);
+        }
+    }
+
+    // Función de validación
+    static float LeerNotaValida(int numeroNota)
+    {
+        while (true)
+        {
+            Console.Write($"Nota #{numeroNota}: ");
+            string input = Console.ReadLine();
+
+            // Intentar convertir respetando el punto decimal
+            if (float.TryParse(input, NumberStyles.Float, CultureInfo.InvariantCulture, out float valor))
+            {
+                // Validar rango y no negativos
+                if (valor < 0)
+                {
+                    Console.WriteLine("ERROR: No se permiten números negativos.");
+                }
+                else if (valor < 1 || valor > 5)
+                {
+                    Console.WriteLine("ERROR: La nota debe estar entre 1.0 y 5.0.");
+                }
+                else
+                {
+                    return valor; // válido
+                }
+            }
+            else
+            {
+                Console.WriteLine("ERROR: Formato inválido. Use punto (.) para decimales. Ej: 3.5");
+            }
+
+            Console.WriteLine("Intente nuevamente.\n");
         }
     }
 }
