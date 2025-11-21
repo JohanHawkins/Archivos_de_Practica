@@ -1,0 +1,7 @@
+Crea un programa que:
+
+- Solicite al usuario una frase.
+- Separe la frase en palabras y guárdalas en una lista.
+- Recorra la lista con un ciclo para contar cuántas palabras tienen más de 5 letras.
+- Usa una función que reciba la lista de palabras y retorne la cantidad.
+- Muestra el resultado con un mensaje.
