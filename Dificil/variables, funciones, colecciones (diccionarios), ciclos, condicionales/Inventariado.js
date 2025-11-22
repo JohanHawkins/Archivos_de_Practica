@@ -21,15 +21,15 @@ function preguntar(texto) {
 async function main() {
   let opcion = 0;
 
-  while (opcion != 2) {
-    opcion = parseInt(await preguntar("Presiona:\n1. Agregar unidades\n2. Salir\n> "));
+  while (opcion != 3) {
+    opcion = parseInt(await preguntar("Presiona:\n1. Agregar unidades\n2. Retirar unidades\n3. Salir\n> "));
 
+    // OPCIÓN 1: AGREGAR
     if (opcion === 1) {
       const producto = await preguntar("Producto (Manzanas, Peras, Bananos): ");
 
       if (inventario.hasOwnProperty(producto)) {
 
-        // Validar que no ingresen negativos o ceros
         let unidades = -1;
         while (isNaN(unidades) || unidades <= 0) {
           unidades = parseInt(await preguntar(`¿Cuántas unidades agregar a ${producto}? `));
@@ -45,10 +45,41 @@ async function main() {
       } else {
         console.log("\nEl producto no existe en el inventario.\n");
       }
+    }
 
-    } else if (opcion === 2) {
+    // OPCIÓN 2: RETIRAR
+    else if (opcion === 2) {
+      const producto = await preguntar("Producto (Manzanas, Peras, Bananos): ");
+
+      if (inventario.hasOwnProperty(producto)) {
+
+        let unidades = -1;
+        while (isNaN(unidades) || unidades <= 0) {
+          unidades = parseInt(await preguntar(`¿Cuántas unidades retirar de ${producto}? `));
+
+          if (isNaN(unidades) || unidades <= 0) {
+            console.log("\nError: Debes ingresar un número mayor a 0.\n");
+          }
+        }
+
+        if (unidades > inventario[producto]) {
+          console.log("\nError: No puedes retirar más unidades de las que hay.\n");
+        } else {
+          inventario[producto] -= unidades;
+          console.log(`\n${producto} ahora tiene ${inventario[producto]} unidades.\n`);
+        }
+
+      } else {
+        console.log("\nEl producto no existe en el inventario.\n");
+      }
+    }
+
+    // ------------------ OPCIÓN 3: SALIR ------------------
+    else if (opcion === 3) {
       console.log("\nSaliendo del programa...");
-    } else {
+    } 
+    
+    else {
       console.log("\nOpción no válida.\n");
     }
   }
