@@ -21,8 +21,8 @@ function preguntar(texto) {
 async function main() {
   let opcion = 0;
 
-  while (opcion != 3) {
-    opcion = parseInt(await preguntar("Presiona:\n1. Agregar unidades\n2. Retirar unidades\n3. Salir\n> "));
+  while (opcion != 4) {
+    opcion = parseInt(await preguntar("Presiona:\n1. Agregar unidades\n2. Retirar unidades\n3. Mostrar Inventario \n4. Salir\n> "));
 
     // OPCIÓN 1: AGREGAR
     if (opcion === 1) {
@@ -76,6 +76,15 @@ async function main() {
 
     // ------------------ OPCIÓN 3: SALIR ------------------
     else if (opcion === 3) {
+      console.log("\nINVENTARIO ACTUAL:");
+      for(const producto in inventario){
+        console.log(`${producto}: ${inventario[producto]}`);
+      }
+      console.log("");
+    }
+
+    // ------------------ OPCIÓN 3: SALIR ------------------
+    else if (opcion === 4) {
       console.log("\nSaliendo del programa...");
     } 
     
