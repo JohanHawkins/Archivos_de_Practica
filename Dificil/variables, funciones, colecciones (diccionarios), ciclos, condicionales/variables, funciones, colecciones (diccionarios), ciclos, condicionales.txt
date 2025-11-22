@@ -1,0 +1,18 @@
+Crea un programa de inventario que:
+
+Use un diccionario para almacenar productos:
+inventario = {
+    "manzanas": 10,
+    "peras": 5,
+    "bananos": 12
+}
+
+Crea un menú en ciclo que permita:
+(1) Agregar unidades a un producto
+(2) Retirar unidades
+(3) Mostrar inventario completo
+(4) Salir
+
+Cada opción debe llamarse mediante una función diferente.
+Valida con condicionales que no se retiren más unidades de las que hay.
+El programa debe seguir ejecutándose hasta que el usuario elija salir.
