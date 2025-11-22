@@ -1,0 +1,3 @@
+- En primera instancia se requiere un Input que permita la entrada de la frase
+- Una funcion la cual obtengan la frase y detecte los "espacios" que existen en la frase
+- Se podria aplicar un Array Dinamico, el cual se adapte el numero de especios +1
