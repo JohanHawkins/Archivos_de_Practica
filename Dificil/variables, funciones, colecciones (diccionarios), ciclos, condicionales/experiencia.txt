@@ -1,0 +1,2 @@
+Usaremos Js para la parte "dificil" ya que es uno de los lenguajes practicados
+anteriormente de forma empirica
