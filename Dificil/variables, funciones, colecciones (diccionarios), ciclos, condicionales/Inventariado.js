@@ -1,5 +1,5 @@
-// Requerimos el módulo readline para interactuar con la consola
 const readline = require("readline");
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -28,9 +28,20 @@ async function main() {
       const producto = await preguntar("Producto (Manzanas, Peras, Bananos): ");
 
       if (inventario.hasOwnProperty(producto)) {
-        const unidades = parseInt(await preguntar(`¿Cuántas unidades agregar a ${producto}? `));
+
+        // Validar que no ingresen negativos o ceros
+        let unidades = -1;
+        while (isNaN(unidades) || unidades <= 0) {
+          unidades = parseInt(await preguntar(`¿Cuántas unidades agregar a ${producto}? `));
+
+          if (isNaN(unidades) || unidades <= 0) {
+            console.log("\nError: Debes ingresar un número mayor a 0.\n");
+          }
+        }
+
         inventario[producto] += unidades;
         console.log(`\n${producto} ahora tiene ${inventario[producto]} unidades.\n`);
+
       } else {
         console.log("\nEl producto no existe en el inventario.\n");
       }
